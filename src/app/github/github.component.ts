@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; 
-import { User } from '../user';
-import { environment } from 'src/environments/environment';
+import { GitprofileService } from '../gitprofile.service';
 
 @Component({
   selector: 'app-github',
@@ -9,9 +7,24 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
-  
+  public myUser:any=[];
+  public repos:any=[];
+  public username: string = "";
 
-  constructor(private http:HttpClient) { }
+  constructor(private gitprofileService:GitprofileService) {
+
+   }
+   findUser(){
+    this.gitprofileService.updateUser(this.username);
+    this.gitprofileService.getUserInfo().subscribe((response: any) =>{
+      this.myUser = response;
+      console.log(response);
+    });
+    this.gitprofileService.getUserRepo().subscribe((myRepo: any) =>{
+      this.repos = myRepo;
+      console.log(myRepo);
+    });
+  }
 
   ngOnInit(): void {
   //   interface ApiResponse{
