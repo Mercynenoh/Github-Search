@@ -27,14 +27,7 @@ export class GithubComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  //   interface ApiResponse{
-  //     name:string;
-      
-  //   }
-  //   this.http.get<ApiResponse>("https://github.com/Mercynenoh").subscribe(data=>{
-  //     // Succesful API request
-  //     this.user = new User(data.name)
-  //   })
+  
   }
 
 }

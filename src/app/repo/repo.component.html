@@ -1,1 +1,36 @@
-<p>repo works!</p>
+<section >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Search for github repository</h5>
+          <div class="myForm">
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a Repository Name" [(ngModel)]='repoName' name="repoName" >
+                          <button class="btn btn-info mt-3" (click)="findUser()"> Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+<section class="repo">
+    <div class="container">
+       
+            <div  *ngFor='let repos of myRepos'>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <h4 class="alert-heading">{{repos.name}}</h4>
+                    <h6 class="alert-heading">Subscribers <span class="show">{{repos.subscribers_count}}</span>     Watchers <span class="show">{{repos.watchers_count}}</span></h6>
+                    <h6 class="alert-heading">Forks <span class="show">{{repos.forks_count}}</span>     Homepage <span class="show">{{repos.homepage}}</span></h6>
+                    <p>{{repos.description}}</p>
+                    <hr>
+                    <p>{{repos.created_at}}</p>
+                    <p class="mb-0"><a href="{{repos.html_url}}" target="blank" class="alert-link">View Project on Github</a></p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            </div>
+        </div>
+   
