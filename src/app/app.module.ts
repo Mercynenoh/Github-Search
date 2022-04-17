@@ -7,13 +7,15 @@ import { FormComponent } from './form/form.component';
 import { GithubComponent } from './github/github.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RepoComponent } from './repo/repo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     GithubComponent,
-    RepoComponent
+    RepoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
