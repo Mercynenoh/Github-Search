@@ -1,1 +1,130 @@
-<p>github works!</p>
+<section class="first" id="first">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="myForm">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Search Github Username"
+                [(ngModel)]='username' name="username" (keyup)="findUser()">
+              <!--keyup is an event binding that responds to DOM event, like when a user presses and releases a key-->
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="description">
+          <h3>Let's Start Googling</h3>
+          <h4>Github Profiles</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section *ngIf='myUser.login' class="two">
+  <div class="container">
+    <div class="row">
+      <div class=" col-md-3">
+        <div class="card-group">
+          <div class="cards" id="cadi">
+            <ul class="navs">
+              <li class="mytag">Profile Picture</li>
+              <li> <img src="{{myUser.avatar_url}}" class="img img-fluid"></li>
+            </ul>
+            <ul class="navs">
+              <li class="mytag">Public Name </li>
+              <li class="card-text">{{myUser.name}}</li>
+            </ul>
+            <ul class="navs">
+              <li class="mytag">Public Gists</li>
+              <li class="card-text">{{myUser.public_gists}}</li>
+            </ul>
+            <ul class="navs" *ngIf='myUser.email'>
+              <li class="mytag">Public Repos</li>
+              <li class="card-text">{{myUser.public_repos}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9  d-flex pb-3">
+        <div class="card-group">
+          <div class="cards">
+            <ul class="navs">
+              <li class="mytag">Github Username</li>
+              <li class="card-text"> {{myUser.login}}</li>
+            </ul>
+            <ul class="navs">
+              <li class="mytag">User Bio </li>
+              <li class="card-text">{{myUser.bio}}</li>
+            </ul>
+            <ul class="navs" *ngIf="myUser.company">
+              <li class="mytag">Company</li>
+              <li class="card-text">{{myUser.company}}</li>
+            </ul>
+            <ul class="navs" *ngIf='myUser.hireable'>
+              <li class="mytag">Available For Hire</li>
+              <li class="card-text">Yes</li>
+            </ul>
+            <ul class="navs" *ngIf='myUser.blog'>
+              <li class="mytag">User Blog</li>
+              <li class="card-texts"><a href="{{myUser.blog}}" target="blank">
+                  {{myUser.blog}}</a></li>
+            </ul>
+            <ul class="navs" *ngIf='myUser.email'>
+              <li class="mytag">User Email</li>
+              <li class="card-texts"><a href="emailto:{{myUser.email}}">{{myUser.email}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="scr">
+        <div class="col-md-12">
+            <div class="down">
+                <a href="#seco">
+                    <button type="button" class="btn btn-outline-primary">View This user Repositories</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#first">Search User Profile</a></li>
+              <li>User repositories</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="second" id="seco">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let repo of repos">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <h4 class="alert-heading"><strong>{{repo.name}}</strong><span class="material-icons-outlined">
+              verified
+            </span></h4>
+          <p>
+            {{repo.description}}
+          </p>
+          <hr>
+          <p class="mb-0"><a href="{{repo.html_url}}" target="blank" class="alert-link">View Project on Github</a></p>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

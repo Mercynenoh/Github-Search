@@ -1,7 +1,4 @@
 export class User {
-    constructor(
-        public name: string
-    ){
-
-    }
+    public myUser:any=[];
+    public repos:any=[];
 }
