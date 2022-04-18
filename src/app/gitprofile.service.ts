@@ -31,7 +31,7 @@ export class GitprofileService {
     }));
   }
   searchRepo(){
-    return this.http.get("https://api.github.com/search/repositories?q=" + this.repoName + "&client_secret=" + environment.clientSecret) 
+    return this.http.get("https://api.github.com/search/repositories?q=" + this.repoName ) 
     .pipe(map(data=>{
       return data;
     }));
