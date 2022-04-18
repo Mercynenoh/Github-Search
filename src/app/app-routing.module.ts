@@ -5,7 +5,8 @@ import { GithubComponent } from './github/github.component';
 import { RepoComponent } from './repo/repo.component';
 
 const routes: Routes = [
-  { path: 'gitsearch', component: GithubComponent}
+  { path: 'gitsearch', component: GithubComponent},
+  { path: '', redirectTo:"/goals", pathMatch:"full"},
 ];
 
 @NgModule({
