@@ -3,10 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { RepoComponent } from './repo/repo.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'gitsearch', component: GithubComponent},
-  { path: '', redirectTo:"/goals", pathMatch:"full"},
+ 
+  { path: '', redirectTo:"/gitsearch", pathMatch:"full"},
+  // { path:'**', component:NotFoundComponent},
+
 ];
 
 @NgModule({
