@@ -8,6 +8,7 @@ import { GithubComponent } from './github/github.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RepoComponent } from './repo/repo.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormComponent,
     GithubComponent,
     RepoComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
