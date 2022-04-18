@@ -1,27 +1,38 @@
 # Github
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0. It allows the user to search for githuib accounts using github user name and to also search for repositories by name.
 
-## Development server
+![Screenshot from 2022-04-19 00-24-41](https://user-images.githubusercontent.com/94294714/163881580-155305de-928b-484c-b9f7-9cf4714fe4af.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## By:
+**Mercy Chepngenoh**
 
-## Code scaffolding
+## Description
+This is a web page designed to simplify the search of github pages. By simply writing the github username or repository name, the user gets the account instantly.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Set-up/ Installation requirements
+*Open your terminal (ctrl+alt+T).
 
-## Build
+*Initialize git on your terminal.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+*git clone https://github.com/Mercynenoh/Git-search.git
 
-## Running unit tests
+*Run npm start on your terminal
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+*Then view the web page.
 
-## Running end-to-end tests
+*Search for any account on github using the search forms provided.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Known bugs
 
-## Further help
+The web currently runs smoothly with no hitches. Incase any bugs arise,I will look into it and have it sorted!
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies used
+
+The project was created entirely using Angular. I used bootstrap for forms and styles In the future I hope to improve it and incorporate other programming languages to make the user experience even better.
+
+## Support and Contact
+
+Incase you run into any issue or need any clarification, contact me via email: mercychepngenoh74@gmail.com. If you would also like to contribute to the project, contact me via the same email.
+## License
+The web is under MIT license and is open for anyone interested in using it. Copyright (c) 2022
